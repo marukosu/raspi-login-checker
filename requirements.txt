@@ -1,0 +1,6 @@
+libusb1==1.6.4
+ndeflib==0.3.2
+nfcpy==0.13.4
+pyDes==2.0.1
+pyserial==3.4
+RPi.GPIO==0.6.3
