@@ -27,8 +27,9 @@ class CardReader:
 		data = {
 			'idm':  self.idm
 		}
+		print('   request data: ' + str(data))
 		response = requests.post(self.post_url, json=data)
-		print('response status code: ' + str(response.status_code))
+		print('   response status code: ' + str(response.status_code))
 
 	def read_id(self):
 		clf = nfc.ContactlessFrontend('usb')
@@ -43,5 +44,4 @@ if __name__ == '__main__':
 	while True:
 		print('** waiting for a tag **')
 		reader.read_id()
-		print('   idm: ' + reader.idm)
 		print('   released')
