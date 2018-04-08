@@ -7,6 +7,7 @@ import binascii
 import nfc
 import json
 import requests
+import time
 
 class CardReader:
 	def __init__(self):
@@ -25,7 +26,8 @@ class CardReader:
 	
 	def post_data(self):
 		data = {
-			'idm':  self.idm
+			'idm': self.idm,
+			'ts': time.time()
 		}
 		print('   request data: ' + str(data))
 		response = requests.post(self.post_url, json=data)
